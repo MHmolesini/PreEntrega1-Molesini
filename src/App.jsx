@@ -3,11 +3,11 @@ import reactLogo from './assets/react.svg'
 // Aca importo la lista de productos
 import { PRODUCTS } from './products'
 import { Product } from './assets/shop/products' 
-import { Navbar } from './components/navbar'
+import { Navbar } from './components/Navbar/index'
 // import { CartWidgetProvider } from './components/CartWidget'
 
 import './App.css'
-import './components/navbar.css'
+import './components/Navbar/navbar.css'
 import './assets/shop/products.css'
 
 import LogoZahria from './assets/images/logos/1.webp'
