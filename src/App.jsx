@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 // Aca importo la lista de productos
-import { PRODUCTS } from './products'
-import { Product } from './assets/shop/products' 
+import { PRODUCTS } from './assets/shop/products'
+import { Product } from './components/ItemListContainer/ItemListContainer' 
 import { Navbar } from './components/Navbar/index'
 // import { CartWidgetProvider } from './components/CartWidget'
 
 import './App.css'
-import './components/Navbar/navbar.css'
-import './assets/shop/products.css'
+import css from './components/Navbar/navbar.module.css'
+import cssProducts from './components/ItemListContainer/products.module.css'
+
 
 import LogoZahria from './assets/images/logos/1.webp'
 
@@ -40,15 +40,15 @@ function App() {
 
 
       {/* Aca empieza la aplicacion */}
-      <header className='header'>
-        <div className='header__logo'><img src={LogoZahria} alt='Logo de Zahria'/></div>
+      <header className={css.header}>
+        <div className={css.header__logo}><img src={LogoZahria} alt='Logo de Zahria'/></div>
         <Navbar></Navbar>
       </header>
       {/* <CartWidgetProvider> */}
       
       <main>
         <h1>Productos destacados</h1>
-        <div className='main__cards'>
+        <div className={cssProducts.main__cards}>
           {PRODUCTS.map((product) => (
             <Product data={product}/>
           ))}

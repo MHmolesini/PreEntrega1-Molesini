@@ -41,6 +41,10 @@
     padding: 0.6rem 1.2rem;
     width: 70%;
     height: 2rem;
-    background-color: white;
+    background-color: #535bf2;
     border: 1px solid black;
+}
+
+.main__card .card .card__button p {
+    color: black
 }

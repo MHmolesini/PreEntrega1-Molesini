@@ -1,11 +1,9 @@
-import  React, { useContext } from "react"
-
+import  React from "react"
+// Importo los estilos
 import css from "./products.module.css"
-// import { CartWidgetProvider } from '../../components/CartWidget'
 
 export const Product = (props) => {
     const {id, productName, price, productImage} = props.data;
-    // const { addToCart } = useContext(CartWidgetProvider)
 
     return <div className={css.card}>
         <img src={productImage}></img>
@@ -13,6 +11,8 @@ export const Product = (props) => {
             <p><b>{productName}</b></p>
             <p>${price}</p>
         </div>
-        <button className={css.card__button}>Agregar</button>
+        <button className={css.card__button}>
+            <p>Agregar</p>
+        </button>
     </div>
 }
