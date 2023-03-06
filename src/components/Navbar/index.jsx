@@ -1,6 +1,7 @@
 import React from "react"
+// importo los estilos
 import css from "./navbar.module.css"
-
+// importo el componente de la cardWidget
 import {CartWidget} from '../CartWidget/index'
 
 export const Navbar = () => {

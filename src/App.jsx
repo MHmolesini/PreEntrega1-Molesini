@@ -13,7 +13,7 @@ import cssProducts from './components/ItemListContainer/products.module.css'
 import LogoZahria from './assets/images/logos/1.webp'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <div className="App">
@@ -44,7 +44,6 @@ function App() {
         <div className={css.header__logo}><img src={LogoZahria} alt='Logo de Zahria'/></div>
         <Navbar></Navbar>
       </header>
-      {/* <CartWidgetProvider> */}
       
       <main>
         <h1>Productos destacados</h1>
@@ -54,7 +53,6 @@ function App() {
           ))}
         </div>
       </main>
-      {/* </CartWidgetProvider> */}
 
       <footer>
 

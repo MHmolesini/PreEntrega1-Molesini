@@ -1,7 +1,5 @@
 /* Le doy propiedades a todas las cards de los productos */
 .main__cards {
-    /* background-color: aqua; */
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -19,16 +17,9 @@
     margin: 3rem 0;
 }
 
-/* @keyframes card-hover {
-    to {
-        transform: translateY(-10px);
-    }
-} */
-
 .main__cards .card:hover {
     box-shadow: 5px 5px 15px black;
     cursor: pointer;
-    /* animation: card-hover 500ms ease-in-out forwards; */
 }
 
 .main__cards .card .card__text {
