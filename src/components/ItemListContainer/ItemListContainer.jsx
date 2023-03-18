@@ -1,4 +1,4 @@
-import  React from "react"
+import React from "react"
 // Importo los estilos
 import css from "./products.module.css"
 

@@ -1,0 +1,52 @@
+.slide {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    height: 92vh;
+}
+
+.slide .slide__components {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+
+.slide .slide__components h1 {
+    font-size: 6.25rem;
+    font-weight: 700;
+    color: #ba95ca;
+    text-shadow: 3px 3px 10px black;
+}
+
+.slide .slide__components p {
+    color: #272829;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+.slide .slide__components button {
+    background-color: #ba95ca;
+    color: white;
+    font-weight: 700;
+    height: 2.5rem;
+    width: 10rem;
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 3px 3px 5px black;
+    cursor: pointer;
+}
+
+.slide .slide__components button:hover {
+    background-color: #535bf2;
+    box-shadow: 5px 5px 8px black;
+}
+
+.slide img {
+    object-fit: cover;
+}

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 // Aca importo la lista de productos
-import { PRODUCTS } from './assets/shop/products'
+import { PRODUCTS } from './assets/ProductList/products'
 import { Product } from './components/ItemListContainer/ItemListContainer' 
 import { Navbar } from './components/Navbar/index'
 // import { CartWidgetProvider } from './components/CartWidget'
@@ -11,6 +11,9 @@ import cssProducts from './components/ItemListContainer/products.module.css'
 
 
 import LogoZahria from './assets/images/logos/1.webp'
+import { Route, Routes } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { Slide } from './components/Slide'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -39,20 +42,29 @@ function App() {
       </p> */}
 
 
+
       {/* Aca empieza la aplicacion */}
       <header className={css.header}>
-        <div className={css.header__logo}><img src={LogoZahria} alt='Logo de Zahria'/></div>
+        <div className={css.header__logo}><Link to="/"><img src={LogoZahria} alt='Logo de Zahria'/></Link></div>
         <Navbar></Navbar>
       </header>
+      <Routes>
+        <Route path='/' element={<Slide></Slide>}></Route>
+        <Route 
+          path='/store' 
+          element={
+            <main>
+              <h1>Productos destacados</h1>
+              <div className={cssProducts.main__cards}>
+                {PRODUCTS.map((product) => (
+                  <Product data={product}/>
+                ))}
+              </div>
+            </main>}>
+        </Route>
+      </Routes>
       
-      <main>
-        <h1>Productos destacados</h1>
-        <div className={cssProducts.main__cards}>
-          {PRODUCTS.map((product) => (
-            <Product data={product}/>
-          ))}
-        </div>
-      </main>
+
 
       <footer>
 
