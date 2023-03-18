@@ -21,6 +21,7 @@
     font-weight: 700;
     color: #ba95ca;
     text-shadow: 3px 3px 10px black;
+    text-align: left;
 }
 
 .slide .slide__components p {

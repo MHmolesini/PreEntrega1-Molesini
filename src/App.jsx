@@ -62,6 +62,14 @@ function App() {
               </div>
             </main>}>
         </Route>
+        <Route
+          path='/store/:id'
+          element={
+            <h2>jajajjaja</h2>
+          }
+          >
+
+        </Route>
       </Routes>
       
 
