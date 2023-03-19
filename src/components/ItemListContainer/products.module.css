@@ -1,5 +1,28 @@
 /* Le doy propiedades a todas las cards de los productos */
-.main__cards {
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+  
+main .mainStore__sections {
+    display: flex;
+    flex-direction: row;
+}
+
+.main__products {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+
+/* .main__cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -38,4 +61,4 @@
 
 .main__card .card .card__button p {
     color: black
-}
+} */

@@ -1,18 +1,25 @@
-import React from "react"
-// Importo los estilos
-import css from "./products.module.css"
+import React, { useState } from "react";
+import { PRODUCTS } from '../../assets/ProductList/products'
+import { Card } from "../Card";
+import css from './products.module.css'
 
-export const Product = (props) => {
-    const {id, productName, price, productImage} = props.data;
+export const Products = () => {
+    const [products, setProducts] = useState(PRODUCTS);
 
-    return <div className={css.card}>
-        <img src={productImage}></img>
-        <div className={css.card__text}>
-            <p><b>{productName}</b></p>
-            <p>${price}</p>
+    return (
+        <div className={css.main__products}>
+            {products.map(product => {
+                return (
+                    <div className={css.main__products__item}>
+                        <Card 
+                            key={product.id}
+                            productImage={product.productImage}
+                            productName={product.productName}
+                            price={product.price}>
+                        </Card>
+                    </div>
+                )
+            })}
         </div>
-        <button className={css.card__button}>
-            <p>Agregar</p>
-        </button>
-    </div>
+    )
 }
