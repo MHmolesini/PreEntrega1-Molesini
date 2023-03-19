@@ -1,0 +1,13 @@
+.footer__redes {
+    font-size: 1.5rem;
+    display: flex;
+}
+
+.footer__redes__item {
+    margin: 0 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgb(53, 54, 54);
+}
+
