@@ -1,22 +1,19 @@
+/* Estilos a las cards de los productos */
 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* border: 1px solid black; */
     border-radius: 10px;
     height: 400px;
     width: 300px;
     margin: 2rem 0;
     box-shadow: 3px 3px 8px black;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .card:hover {
     box-shadow: 5px 5px 12px black;
-}
-
-.Link a {
-    text-decoration: none;
 }
 
 .card .card__img {
@@ -40,13 +37,16 @@
     width: 100%;
     margin: 0 auto;
     font-size: 1.15rem;
-    
 }
 
 .card .card__description .card__description__price {
     font-weight: 700;
     font-size: 1.75rem;
     color: black;
+}
+
+.card .card__description .card__description__id {
+    display: none;
 }
 
 .card .card__description button {
