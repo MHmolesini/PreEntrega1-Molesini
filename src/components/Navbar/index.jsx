@@ -12,7 +12,7 @@ export const Navbar = () => {
             <li><Link to="/contact"><a>Contactanos</a></Link></li>
             <li><Link to="/about"><a>Sobre nosotros</a></Link></li>
             <li><Link to="/questions"><a>Preguntas frecuentes</a></Link></li>
-            <li><a className="header__navbar__menu__item"><CartWidget />1</a></li>
+            <li><Link to="/cart"><a className="header__navbar__menu__item"><CartWidget />1</a></Link></li>
         </ul>
 
     </div>

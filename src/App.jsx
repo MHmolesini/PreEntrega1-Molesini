@@ -63,6 +63,7 @@ function App() {
         <Route path='/contact' element={<Mantenimiento></Mantenimiento>}></Route>
         <Route path='/about' element={<Mantenimiento></Mantenimiento>}></Route>
         <Route path='/questions' element={<Mantenimiento></Mantenimiento>}></Route>
+        <Route path='/cart' element={<Mantenimiento></Mantenimiento>}></Route>
         <Route path='*' element={<h3>404 Not Found</h3>}></Route>
       </Routes>
       
