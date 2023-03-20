@@ -1,0 +1,11 @@
+.mantenimiento {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mantenimiento .mantenimiento__item i {
+    color: rgb(185, 185, 185);
+    font-size: 200px;
+}
