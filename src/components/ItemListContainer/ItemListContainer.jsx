@@ -15,7 +15,8 @@ export const Products = () => {
                             key={product.id}
                             productImage={product.productImage}
                             productName={product.productName}
-                            price={product.price}>
+                            price={product.price}
+                            id={product.id}>
                         </Card>
                     </div>
                 )

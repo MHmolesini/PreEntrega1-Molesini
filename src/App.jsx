@@ -1,46 +1,31 @@
 import { useState } from 'react'
 // Aca importo la lista de productos
-import { PRODUCTS } from './assets/ProductList/products'
-import { Product } from './components/ItemListContainer/ItemListContainer' 
+import { Products } from './components/ItemListContainer/ItemListContainer' 
+// import { ItemDetailContainer } from './components/ItemDetailContainer/index'
 import { Navbar } from './components/Navbar/index'
+import { Footer } from './components/Footer/index'
 // import { CartWidgetProvider } from './components/CartWidget'
+import { Filters } from './components/Filters/index'
 
 import './App.css'
 import css from './components/Navbar/navbar.module.css'
-import cssProducts from './components/ItemListContainer/products.module.css'
+// import cssProducts from './components/ItemListContainer/products.module.css'
 
 
 import LogoZahria from './assets/images/logos/1.webp'
 import { Route, Routes } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { Slide } from './components/Slide'
+import { ItemDetailContainer } from './components/ItemDetailContainer'
+import { Mantenimiento } from './components/mantenimiento'
+
 
 function App() {
   // const [count, setCount] = useState(0)
+  const [products] = useState([]);
 
   return (
     <div className="App">
-      {/* <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div> */}
-      {/* <h1>Vite + React</h1> */}
-      {/* <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div> */}
-      {/* <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
-
 
 
       {/* Aca empieza la aplicacion */}
@@ -53,30 +38,40 @@ function App() {
         <Route 
           path='/store' 
           element={
-            <main>
+            <main className={css.mainStore}>
               <h1>Productos destacados</h1>
-              <div className={cssProducts.main__cards}>
-                {PRODUCTS.map((product) => (
-                  <Product data={product}/>
-                ))}
+              <div className={css.mainStore__sections}>
+                {/* <Filters></Filters> */}
+                <Products></Products>
               </div>
             </main>}>
         </Route>
-        <Route
+        <Route 
+          path='/store/:id'
+          element={<ItemDetailContainer products={products}></ItemDetailContainer>}
+        >
+        </Route>
+        {/* <Route
           path='/store/:id'
           element={
-            <h2>jajajjaja</h2>
+            
+            <ItemDetailContainer></ItemDetailContainer>
           }
           >
 
-        </Route>
+        </Route> */}
+        <Route path='/contact' element={<Mantenimiento></Mantenimiento>}></Route>
+        <Route path='/about' element={<Mantenimiento></Mantenimiento>}></Route>
+        <Route path='/questions' element={<Mantenimiento></Mantenimiento>}></Route>
+        <Route path='*' element={<h3>404 Not Found</h3>}></Route>
       </Routes>
       
 
 
       <footer>
-
+          <Footer></Footer>
       </footer>
+      
     </div>
   )
 }
