@@ -8,6 +8,15 @@
     width: 300px;
     margin: 2rem 0;
     box-shadow: 3px 3px 8px black;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 12px black;
+}
+
+.Link a {
+    text-decoration: none;
 }
 
 .card .card__img {
@@ -27,14 +36,17 @@
 }
 
 .card .card__description p {
-    color: black;
+    color: rgb(71, 69, 69);
     width: 100%;
     margin: 0 auto;
+    font-size: 1.15rem;
+    
 }
 
 .card .card__description .card__description__price {
     font-weight: 700;
     font-size: 1.75rem;
+    color: black;
 }
 
 .card .card__description button {
@@ -48,6 +60,7 @@
     border: none;
     box-shadow: 3px 3px 5px black;
     cursor: pointer;
+    margin-top: 0.25rem;
 }
 
 .card .card__description button:hover {
